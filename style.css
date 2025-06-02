@@ -128,7 +128,7 @@ h1 {
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     body {
-        min-height: 100vhs;
+        min-height: 100vh;
     }
 
     .game-container {
@@ -168,7 +168,7 @@ h1 {
 
 @media screen and (max-width: 480px) {
     body {
-        min-height: 100vhs;
+        min-height: 100vh;
     }
 
     .game-container {
