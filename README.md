@@ -12,7 +12,7 @@ A simple and fun **Shell Game** built with **HTML, CSS, and JavaScript**. Can yo
 ## 🚀 Live Demo
 
 You can try out the game here:  
-👉 [GitHub Pages Link](https://sithi-sak.github.io/shell-game)
+👉 [Shell Game](https://sithi-sak.github.io/shell-game)
 
 ## 📂 Project Structure
 
