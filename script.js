@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isShuffling || gameOver) return;
 
         isShuffling = true;
-        message.textContent = "Watch carefully...";
+        message.textContent = "🎲";
         ball.style.opacity = "0";
 
         let shuffleCount = 8;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         function performShuffle() {
             if (currentShuffle >= shuffleCount) {
                 isShuffling = false;
-                message.textContent = "Pick a cup!";
+                message.textContent = "រើសកែវមួយ!";
                 return;
             }
 
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Lift clicked cup with animation
         clickedCup.style.transition = "transform 0.3s ease-out";
-        clickedCup.style.transform = "translateY(-100px)";
+        clickedCup.style.transform = "translateY(-50px)";
 
         // Get unclicked cups
         const unclickedCups = cupElements.filter(
@@ -124,12 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
             // Show losing message
-            message.textContent = "😞 You lose!";
+            message.textContent = "😞 អ្នកចាញ់!";
             message.style.color = "#f44336";
 
             // Lift the rigged cup with animation
             riggedCup.style.transition = "transform 0.3s ease-out";
-            riggedCup.style.transform = "translateY(-100px)";
+            riggedCup.style.transform = "translateY(-50px)";
 
             // Position ball under rigged cup - simplified centering
             const cupRect = riggedCup.getBoundingClientRect();
@@ -154,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     shuffleButton.addEventListener("click", () => {
         resetGame();
+        message.textContent = "🎲";
         setTimeout(shuffleCups, 300);
     });
 

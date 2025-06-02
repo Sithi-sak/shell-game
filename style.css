@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     text-align: center;
+    padding: 20px;
 }
 
 h1 {
@@ -28,11 +29,24 @@ h1 {
     gap: 20px;
     height: 256px;
     position: relative;
+    width: 100%;
+    max-width: 800px;
 }
 
 .cup {
     position: relative;
     cursor: pointer;
+    width: auto;
+    height: auto;
+    max-width: 256px;
+    transform-origin: bottom center;
+}
+
+.cup img {
+    width: 100%;
+    height: auto;
+    max-width: 256px;
+    display: block;
 }
 
 #ball {
@@ -41,6 +55,9 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
+    width: auto;
+    height: auto;
+    max-width: 128px;
 }
 
 #message {
@@ -106,4 +123,78 @@ h1 {
 .btn-class-name:active .front {
     transform: translateY(0%);
     box-shadow: 0 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .game-container {
+        gap: 10px;
+        max-width: 100vw;
+        height: 80px;
+        justify-content: space-evenly;
+
+        display: flex;
+        align-items: center;
+        height: 256px;
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .cup img {
+        max-width: 100px;
+    }
+
+    #ball {
+        max-width: 50px;
+    }
+
+    #message {
+        font-size: 1.8rem;
+        margin-bottom: 128px;
+    }
+
+    .btn-class-name {
+        width: 60px;
+        height: 50px;
+        margin-top: 64px;
+        outline-width: 6px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-container {
+        gap: 5px;
+        justify-content: space-evenly;
+        height: 80px;
+        max-width: 100vw;
+
+        display: flex;
+        align-items: center;
+        height: 100px;
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .cup img {
+        width: auto;
+        height: auto;
+    }
+
+    #ball {
+        max-width: 40px;
+    }
+
+    #message {
+        font-size: 1.5rem;
+        margin-bottom: 96px;
+    }
+
+    .btn-class-name {
+        width: 50px;
+        height: 40px;
+        margin-top: 64px;
+        outline-width: 4px;
+    }
 }
