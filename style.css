@@ -1,219 +1,245 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    background-color: #e8e8e8;
-    font-family: "Inter", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    height: 100%;
-    /* Prevent overscroll bounce */
-    overscroll-behavior: none;
-    -webkit-overflow-scrolling: touch;
+  background-color: #e8e8e8;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+  /* Prevent overscroll bounce */
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1 {
-    font-size: 3rem;
-    color: #212121;
-    padding: 1rem;
+  font-size: 3rem;
+  color: #212121;
+  padding: 1rem;
 }
 
 .game-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    height: 256px;
-    position: relative;
-    width: 100%;
-    max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 256px;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
 }
 
 .cup {
-    position: relative;
-    cursor: pointer;
-    width: auto;
-    height: auto;
-    max-width: 256px;
-    transform-origin: bottom center;
+  position: relative;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  max-width: 256px;
+  transform-origin: bottom center;
 }
 
 .cup img {
-    width: 100%;
-    height: auto;
-    max-width: 256px;
-    display: block;
+  width: 100%;
+  height: auto;
+  max-width: 256px;
+  display: block;
 }
 
 #ball {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    width: auto;
-    height: auto;
-    max-width: 128px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  width: auto;
+  height: auto;
+  max-width: 128px;
 }
 
 #message {
-    font-size: 2.4rem;
-    font-weight: 500;
-    margin-bottom: 128px;
-    color: #212121;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 128px;
+  color: #212121;
 }
 
 /* From Uiverse.io by catraco */
 .btn-class-name {
-    --primary: 255, 90, 120;
-    --secondary: 150, 50, 60;
-    width: 80px;
-    height: 70px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    user-select: none;
-    touch-action: manipulation;
-    outline: 10px solid rgb(var(--primary), 0.5);
-    border-radius: 100%;
-    position: relative;
-    transition: 0.3s;
-    margin-top: 64px;
+  --primary: 255, 90, 120;
+  --secondary: 150, 50, 60;
+  width: 80px;
+  height: 70px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  outline: 10px solid rgb(var(--primary), 0.5);
+  border-radius: 100%;
+  position: relative;
+  transition: 0.3s;
+  margin-top: 64px;
 }
 
 .btn-class-name .back {
-    background: rgb(var(--secondary));
-    border-radius: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  background: rgb(var(--secondary));
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .btn-class-name .front {
-    background: linear-gradient(
-        0deg,
-        rgba(var(--primary), 0.6) 20%,
-        rgba(var(--primary)) 50%
-    );
-    box-shadow: 0 0.5em 1em -0.2em rgba(var(--secondary), 0.5);
-    border-radius: 100%;
-    position: absolute;
-    border: 1px solid rgb(var(--secondary));
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-family: inherit;
-    transform: translateY(-15%);
-    transition: 0.15s;
-    color: rgb(var(--secondary));
+  background: linear-gradient(
+    0deg,
+    rgba(var(--primary), 0.6) 20%,
+    rgba(var(--primary)) 50%
+  );
+  box-shadow: 0 0.5em 1em -0.2em rgba(var(--secondary), 0.5);
+  border-radius: 100%;
+  position: absolute;
+  border: 1px solid rgb(var(--secondary));
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  transform: translateY(-15%);
+  transition: 0.15s;
+  color: rgb(var(--secondary));
 }
 
 .btn-class-name:active .front {
-    transform: translateY(0%);
-    box-shadow: 0 0;
+  transform: translateY(0%);
+  box-shadow: 0 0;
+}
+
+.game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.overlay-content h2 {
+  margin-top: 0;
+  color: #f44336;
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
+  body {
+    padding: 10px;
+  }
 
-    .game-container {
-        gap: 10px;
-        max-width: 100vw;
-        height: 80px;
-        justify-content: space-evenly;
-        display: flex;
-        align-items: center;
-        height: 256px;
-        position: relative;
-        width: 100%;
-        max-width: 800px;
-    }
+  .game-container {
+    gap: 10px;
+    max-width: 100vw;
+    height: 80px;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    height: 256px;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+  }
 
-    .cup img {
-        max-width: 100px;
-    }
+  .cup img {
+    max-width: 100px;
+  }
 
-    #ball {
-        max-width: 50px;
-    }
+  #ball {
+    max-width: 50px;
+  }
 
-    #message {
-        font-size: 1.8rem;
-        margin-bottom: 128px;
-    }
+  #message {
+    font-size: 1.8rem;
+    margin-bottom: 128px;
+  }
 
-    .btn-class-name {
-        width: 60px;
-        height: 50px;
-        margin-top: 64px;
-        outline-width: 6px;
-    }
+  .btn-class-name {
+    width: 60px;
+    height: 50px;
+    margin-top: 64px;
+    outline-width: 6px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    body {
-        padding: 5px;
-    }
+  body {
+    padding: 5px;
+  }
 
-    .game-container {
-        gap: 5px;
-        justify-content: space-evenly;
-        height: 80px;
-        max-width: 100vw;
-        display: flex;
-        align-items: center;
-        height: 100px;
-        position: relative;
-        width: 100%;
-        max-width: 800px;
-    }
+  .game-container {
+    gap: 5px;
+    justify-content: space-evenly;
+    height: 80px;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+  }
 
-    .cup img {
-        width: auto;
-        height: auto;
-    }
+  .cup img {
+    width: auto;
+    height: auto;
+  }
 
-    #ball {
-        max-width: 40px;
-    }
+  #ball {
+    max-width: 40px;
+  }
 
-    #message {
-        font-size: 1.5rem;
-        margin-bottom: 96px;
-    }
+  #message {
+    font-size: 1.5rem;
+    margin-bottom: 96px;
+  }
 
-    .btn-class-name {
-        width: 50px;
-        height: 40px;
-        margin-top: 64px;
-        outline-width: 4px;
-    }
+  .btn-class-name {
+    width: 50px;
+    height: 40px;
+    margin-top: 64px;
+    outline-width: 4px;
+  }
 }
